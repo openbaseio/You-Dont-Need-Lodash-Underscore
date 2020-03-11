@@ -1,4 +1,8 @@
 {
+  "get": {
+    "compatible": true,
+    "alternative": "a?.b?.c"
+  },
   "concat": {
     "compatible": true,
     "alternative": "Array.prototype.concat()"
@@ -59,7 +63,6 @@
     "compatible": true,
     "alternative": "Array.isArray()"
   },
-
   "each": {
     "compatible": false,
     "alternative": "Array.prototype.forEach() or Object.entries().forEach()"
@@ -142,7 +145,6 @@
     "compatible": false,
     "alternative": "Array.prototype.slice()"
   },
-
   "bind": {
     "ruleName": "bind",
     "compatible": true,
@@ -256,7 +258,7 @@
   },
   "uniq": {
     "compatible": true,
-    "alternative": "[... new Set(arr)]",
+    "alternative": "utils.uniq()",
     "ES6": true
   },
   "replace": {
@@ -265,15 +267,11 @@
   },
   "omit": {
     "compatible": true,
-    "alternative": "{a, b, c, ...notOmittedValues}",
+    "alternative": "{a: _a, b: _b, c: _c, ...notOmittedValues}",
     "ES6": true
   },
   "flatten": {
     "compatible": true,
-    "alternative": "Array.prototype.reduce((a,b) => a.concat(b), [])"
-  },
-  "throttle": {
-    "compatible": true,
-    "alternative": "Example of native implementation: https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore#_throttle"
+    "alternative": "Array.prototype.flat()"
   }
 }
