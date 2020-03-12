@@ -3,6 +3,10 @@
     "compatible": true,
     "alternative": "a?.b?.c"
   },
+  "chain": {
+    "compatible": true,
+    "alternative": "a different approach"
+  },
   "concat": {
     "compatible": true,
     "alternative": "Array.prototype.concat()"
